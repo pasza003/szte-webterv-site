@@ -13,3 +13,6 @@
   - Belépés
   - Saját profil
   - Receptek
+  - Inbox
+  - Chat
+  - Recept létrehozás
