@@ -4,3 +4,12 @@
  - HTML
  - CSS
  - JS
+ - PHP
+ - MySQL
+
+ ## Oldalak
+  - Főoldal
+  - Regisztráció
+  - Belépés
+  - Saját profil
+  - Receptek

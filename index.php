@@ -1,0 +1,133 @@
+<?php
+    session_start();
+    require_once('php/connection.php');
+    require_once('php/includes.php');
+?>
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Főoldal</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" defer></script>
+</head>
+
+<body>
+<?php
+navigationGenerate("index");
+?>
+
+<main>
+    <div class="main-page-container">
+
+        <h1>Legjobb receptek egy helyen</h1>
+
+        <hr>
+
+        <div class="introduction">
+            <div class="introduction-steps">
+                <div class="introduction-card">
+                    <h2 class="introduction-title text-center">Regisztrálj</h2>
+                    <div class="introduction-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M224 256c70.7 0 128-57.31 128-128S294.7 0 224 0C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3C0 496.5 15.52 512 34.66 512h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM616 200h-48v-48C568 138.8 557.3 128 544 128s-24 10.75-24 24v48h-48C458.8 200 448 210.8 448 224s10.75 24 24 24h48v48C520 309.3 530.8 320 544 320s24-10.75 24-24v-48h48C629.3 248 640 237.3 640 224S629.3 200 616 200z"/></svg>
+                    </div>
+                    <p class="introduction-text text-center">
+                        Regisztrált felhasználók hozhatnak létre recepteket és menthetnek el a könnyebb eléréshez.
+                    </p>
+                    <hr class="introduction-register-hr">
+                    <div class="register-link"><a href="register.php">Regisztrálás</a></div>
+                </div>
+
+                <div class="introduction-card">
+                    <h2 class="introduction-title text-center">Tölts fel receptet</h2>
+                    <div class="introduction-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M105.4 182.6c12.5 12.49 32.76 12.5 45.25 .001L224 109.3V352c0 17.67 14.33 32 32 32c17.67 0 32-14.33 32-32V109.3l73.38 73.38c12.49 12.49 32.75 12.49 45.25-.001c12.49-12.49 12.49-32.75 0-45.25l-128-128C272.4 3.125 264.2 0 256 0S239.6 3.125 233.4 9.375L105.4 137.4C92.88 149.9 92.88 170.1 105.4 182.6zM480 352h-160c0 35.35-28.65 64-64 64s-64-28.65-64-64H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456z"/></svg>
+                    </div>
+                    <p class="introduction-text text-center">Töltsd fel a kedvenc receptjeidet, hogy soha többet ne veszítsd el őket!</p>
+                </div>
+
+                <div class="introduction-card">
+                    <h2 class="introduction-title text-center">Oszd meg ismerőseiddel</h2>
+                    <div class="introduction-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M503.7 226.2l-176 151.1c-15.38 13.3-39.69 2.545-39.69-18.16V272.1C132.9 274.3 66.06 312.8 111.4 457.8c5.031 16.09-14.41 28.56-28.06 18.62C39.59 444.6 0 383.8 0 322.3c0-152.2 127.4-184.4 288-186.3V56.02c0-20.67 24.28-31.46 39.69-18.16l176 151.1C514.8 199.4 514.8 216.6 503.7 226.2z"/></svg>
+                    </div>
+                    <p class="introduction-text text-center">Feltöltött és elmentett receptjeidet könnyedén megoszthadot ismerőseiddel!</p>
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Legnépszerűbb receptek</h2>
+        <div class="top-recipe-container recipe-list-container">
+
+            <div class="card-container">
+                <a href="./recipe.php?name=homemade-dupla-sajtos-hamburger">
+                    <img src="./img/homemade-duplasajtos-hamburger.jpg" alt="homemade duplasajtos hamburger">
+                    <h3 class="recipe-name text-center">Homemade duplasajtos hamburger</h3>
+                </a>
+            </div>
+
+            <div class="card-container">
+                <a href="./recipe.php?name=tiramisu">
+                    <img src="./img/tiramisu.jpg" alt="tiramisu.jpg">
+                    <h3 class="recipe-name text-center">Tiramisu</h3>
+                </a>
+            </div>
+
+            <div class="card-container">
+                <a href="./recipe.php?name=grillezett-kenyerlangos">
+                    <img src="./img/grillezett-kenyerlangos.jpg" alt="grillezett kenyerlangos">
+                    <h3 class="recipe-name text-center">Grillezett kenyérlángos</h3>
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Recept toplista</h2>
+        <table class="top-uploaders-table">
+            <tr>
+                <th id="uploader">Feltöltő</th>
+                <th id="uploaded">Darab</th>
+            </tr>
+            <tr>
+                <td headers="uploader"><a href="./profile.php?name=tesztelek">tesztelek</a></td>
+                <td headers="uploaded">3</td>
+            </tr>
+            <tr>
+                <td headers="uploader"><a href="./profile.php?name=tesztelek2">tesztelek2</a></td>
+                <td headers="uploaded">2</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Korábban megtekintett receptek</h2>
+        <div id="recipe-history" class="recipe-list-container">
+            <div class="card-container">
+                <a href="./recipe.php?name=tiramisu">
+                    <img src="./img/tiramisu.jpg" alt="tiramisu.jpg">
+                    <h3 class="recipe-name text-center">Tiramisu</h3>
+                </a>
+            </div>
+
+            <div class="card-container">
+                <a href="./recipe.php?name=grillezett-kenyerlangos">
+                    <img src="./img/grillezett-kenyerlangos.jpg" alt="grillezett kenyerlangos">
+                    <h3 class="recipe-name text-center">Grillezett kenyérlángos</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<?php footerGenerate();?>
+
+</body>
+</html>

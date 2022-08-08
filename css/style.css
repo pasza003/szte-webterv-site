@@ -247,6 +247,8 @@ main {
     color: #fff;
 }
 
+
+
 .default-form .form-btn-container input[type="submit"],
 .profile-form input[type="submit"],
 .recipe-add-comment {
@@ -348,6 +350,10 @@ main {
     margin: 4px;
 }
 
+.comment-user {
+    margin-top: 20px;
+}
+
 .comment-container {
     margin: 150px 0;
 }
@@ -357,9 +363,22 @@ main {
 }
 
 .comment-container .comment {
+    width: 70%;
     border-left: 2px solid #ccc;
     padding-left: 5px;
     margin-bottom: 18px;
+}
+
+.errors-comment {
+    text-align: center;
+    width: 70%;
+    background-color: #E52424;
+    color: #fff;
+    padding: 20px;
+}
+
+.recipe-comment-text {
+    padding: 10px;
 }
 
 .recipe-new-comment label,
@@ -373,10 +392,24 @@ main {
     height: 80px;
 }
 
+.recipe-comment-text {
+    padding: 10px;
+}
+
 .recipe-add-comment {
     width: 200px;
     height: 40px;
 }
+
+.errors-comment {
+    text-align: center;
+    width: 70%;
+    background-color: #E52424;
+    color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+}
+
 
 /* Egy recept oldal */
 .receptneve {
@@ -483,19 +516,6 @@ main {
     position: relative;
 }
 
-#save-recipe {
-    font-family: FontAwesome;
-    width: 20px;
-    height: 30px;
-    margin-right: 10px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-    z-index: 9;
-    fill: var(--bg);
-}
-
 .grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px 0;
@@ -520,6 +540,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.password-update-form {
+    margin: 0 auto !important;
 }
 
 .profile-form > input:not([type="file"]) {
@@ -614,6 +638,131 @@ footer ul li a:hover {
     text-align: center;
 }
 
+.errors, .success {
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px 0;
+    text-align: center;
+}
+.errors-password, .errors {
+    background-color: #E52424;
+    color: #fff;
+}
+.success-password {
+    color: #000;
+    background-color: limegreen;
+}
+.errors-password, .success-password {
+    width:  50%;
+    padding: 20px;
+    text-align: center;
+}
+
+#left-errors{
+    margin: 0 !important;
+}
+
+#left-success{
+    margin: 0 !important;
+}
+
+.errors {
+    background-color: #E52424;
+}
+
+.success {
+    background-color: limegreen;
+}
+
+.message-send-form {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    width: 60%;
+}
+
+.message-send-form label {
+    margin-top: 20px;
+    display: block;
+}
+
+
+#send_message,#new-message {
+    width: 500px;
+    height: 50px;
+    margin-bottom: 30px;
+    background-color: #2471e5;
+    color: #ffffff;
+    text-align: center;
+}
+
+.new-message-to {
+    display: block;
+    height: 50px;
+    padding: 15px;
+    width: 300px;
+}
+
+.new-message-message {
+    padding: 10px;
+    resize: none;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.message-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-message-user-check {
+    width: 250px;
+}
+
+
+#user_check{
+    height: 50px;
+    background-color: #e52424;
+    color: #fff;
+    text-align: center;
+}
+
+.friends-container,.friends td, .friends th{
+    text-align: center !important;
+    width: 50% !important;
+    margin-left: 25%;
+}
+
+#message-right{
+    text-align: right;
+}
+
+#message-left{
+    text-align: left;
+}
+
+.delete_button{
+    width: 10%;
+    height: 30px;
+    background-color: #e52424;
+    color: #fff;
+    text-align: center;
+}
+
+.message-table{
+    width: 50% !important;
+}
+
+#private_email{
+    margin-left: 20%;
+}
+
+#private_birthdate{
+    margin-left: 18%;
+}
+
+
 
 @media only screen and (max-width: 1250px) {
     body {
@@ -700,7 +849,7 @@ footer ul li a:hover {
         margin: 0 auto;
     }
 
-    .recipe-new-comment #recipe-comment {
+    .recipe-new-comment #recipe-comment, .errors-comment {
         width: 100%;
     }
 
@@ -714,6 +863,7 @@ footer ul li a:hover {
         gap: 20px;
     }
 }
+
 
 
 /* Mobil */

@@ -1,0 +1,13 @@
+A mellékelt "szte-webterv.sql" fájlt csak be kell importálni és az oldal használatra kész.
+
+felhasználók:
+	tesztelek
+	tesztelek2
+	tesztelek3
+	tesztelek4
+
+A fentiekhez a jelszó Elek12345
+
+Admin:
+	felh.: admin1
+    jelszó: Admin12345
