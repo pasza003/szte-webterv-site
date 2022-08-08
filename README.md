@@ -1,1 +1,6 @@
-# recept-app
+### SZTE-Webterv
+
+## Technológiák:
+ - HTML
+ - CSS
+ - JS

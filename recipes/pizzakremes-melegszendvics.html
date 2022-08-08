@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pizzakrémes melegszendvics</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/app.js" defer></script>
+    </head>
+
+    <body>
+        <nav class="navbar">
+           <a class="brand" href="../index.html">Receptoldal</a>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Főoldal</a></li>
+                <li class="nav-item"><a class="nav-link" href="../recipes.html">Receptek</a></li>
+                <li class="nav-item"><a class="nav-link" href="../login.html">Bejelentkezés</a></li>
+                <li class="nav-item"><a class="nav-link" href="../register.html">Regisztráció</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="../profile.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kijelentkezés</a></li>
+            </ul>
+
+            <div class="burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+
+        <main>
+            <div class="grid-container">
+                <div id="save-recipe">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 48V512l-192-112L0 512V48C0 21.5 21.5 0 48 0h288C362.5 0 384 21.5 384 48z"/></svg>
+                </div>
+                <h1 class="receptneve">Pizzakrémes melegszendvics</h1>
+                <div class="feltolto text-center">
+                    <div class="rating">
+                        <span>(9)</span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                    </div>
+                    <a href="../users/user12.html">
+                        <img class="img-rounded" height="50" width="50" src="../img/user12.jpg" alt="user12 profil képe">
+                        <p>user12</p>
+                    </a>
+                    <p>Feltöltés ideje: 2022.03.16</p>
+                </div>
+
+                <div class="adatok text-center">
+                    <p>Adag: 4 főre</p>
+                    <p>Idő: 45 perc</p>
+                </div>
+
+                <div class="hozzavalok">
+                    <h2 class="text-center">Hozzávalók:</h2>
+                    <ul>
+                        <li>500 g darált marha-, vagy sertéshús</li>
+                        <li>1 fej hagyma</li>
+                        <li>500 ml passata (passzírozott paradicsom)</li>
+                        <li>só, bors</li>
+                        <li>2 csapott tk szárított majoranna</li>
+                        <li>150 ml tej</li>
+                        <li>3 tk keményítő</li>
+                        <li>100 g reszelt sajt</li>
+                        <li>2 ek olaj</li>
+                        <li>3 gerezd fokhagyma</li>
+                        <li>140 g sűrített paradicsom</li>
+                        <li>3 púpozott tk szárított oregánó</li>
+                        <li>2 púpozott tk szárított bazsalikom</li>
+                        <li>250 ml víz</li>
+                        <li>2 db jó nagy bagett</li>
+                    </ul>
+                </div>
+
+                <div class="elkeszites">
+                    <h2 class="text-center">Elkészítés:</h2>
+                    <p>
+                        Egy lábasban olajon a finomra vágott hagymát üvegesre pirítjuk, majd rádobjuk a vékonyra szeletelt fokhagymát; addig hevítjük, míg erősen illatozni kezd. Ekkor
+                        rádobjuk a darált húst és együtt magas lángon jól lepirítjuk. Felöntjük a passatával, sózzuk, borsozzuk és fűszerezzük a szárított olaszos zöldfűszerekkel. Hozzáadjuk a sűrített paradicsomot, felöntjük tejjel és kis lángon 15 percig rotyogtatjuk.
+                        A keményítőt kikeverjük a vízzel, ráöntjük a ragura és további 5 percig forraljuk erős kevergetés mellett, hogy szép krémes állagot érjünk el.
+                    </p>
+                    <p>
+                        A kapott pizzás melegszendvicskrémet félbevágott bagettre kenjük, megszórjuk sajttal és 200 fokon, grill funkcióval ropogósra sütjük. Ízlés szerint ketchuppal/majonézzel tálaljuk.
+                        A cukros tojássárgáját alaposan elkeverjük a mascarponéval, majd mehet hozzá tojásfehérjehab fele, amivel fellazítjuk a sárgájás részt, ezután
+                        lazán beleforgatjuk a hab másik felét is, ügyelve, hogy ne törjük össze a habot.
+                    </p>
+                </div>
+
+                <div class="media text-center">
+                    <iframe src="https://www.youtube.com/embed/fP0OiLpLTYo"></iframe>
+                    <img src="../img/pizzakremes-melegszendvics.jpg" alt="pizzakremes melegszendvics">
+                </div>
+            </div>
+
+            <div class="comment-container">
+                <h2>Hozzászólások</h2>
+
+                <form class="recipe-new-comment" action="addCommentValidator.php" method="POST">
+                    <label for="recipe-comment">Új hozzászólás:</label>
+                    <textarea id="recipe-comment" name="recipe-comment"></textarea>
+                    <input class="recipe-add-comment cursor-pointer" type="submit" value="Hozzászólás">
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="./index.html">Főoldal</a></li>
+                <li><a href="../recipes.html">Receptek</a></li>
+                <li><a href="../login.html">Bejelentkezés</a></li>
+                <li><a href="../register.html">Regisztráció</a></li>
+
+                <li><a href="../profile.html">Profil</a></li>
+                <li><a href="#">Kijelentkezés</a></li>
+            </ul>
+            <p class="copyright">
+                Copyright &copy; 2022 Receptoldal
+            </p>
+        </footer>
+
+    </body>
+</html>
