@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Az eredeti carbonara</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/app.js" defer></script>
+    </head>
+
+    <body>
+        <nav class="navbar">
+           <a class="brand" href="../index.html">Receptoldal</a>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Főoldal</a></li>
+                <li class="nav-item"><a class="nav-link" href="../recipes.html">Receptek</a></li>
+                <li class="nav-item"><a class="nav-link" href="../login.html">Bejelentkezés</a></li>
+                <li class="nav-item"><a class="nav-link" href="../register.html">Regisztráció</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="../profile.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kijelentkezés</a></li>
+            </ul>
+
+            <div class="burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+
+        <main>
+            <div class="grid-container">
+                <h1 class="receptneve">Az eredeti carbonara</h1>
+                <div class="feltolto text-center">
+                    <div class="rating">
+                        <span>(10)</span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                    </div>
+                    <a href="../users/user12.html">
+                        <img class="img-rounded" height="50" width="50" src="../img/user12.jpg" alt="user12 profil képe">
+                        <p>user12</p>
+                    </a>
+                    <p>Feltöltés ideje: 2022.03.19</p>
+                </div>
+
+                <div class="adatok text-center">
+                    <p>Adag: 2 főre</p>
+                    <p>Idő: 30 perc</p>
+                </div>
+
+                <div class="hozzavalok">
+                    <h2 class="text-center">Hozzávalók:</h2>
+                    <ul>
+                        <li>150 g füstölt kolozsvári szalonna</li>
+                        <li>250 g spagetti</li>
+                        <li>só, bors</li>
+                        <li>80 g parmezán</li>
+                        <li>2 ek olívaolaj</li>
+                        <li>4 db tojás</li>
+                        <li>frissen reszelt szerecsendió</li>
+                        <li>150 - 200 ml tészta-főzővíz</li>
+                    </ul>
+                </div>
+
+                <div class="elkeszites">
+                    <h2 class="text-center">Elkészítés:</h2>
+                    <p>
+                        A szalonnát vékony csíkokra vágjuk, és kb. 2 evőkanál olajon lassan megpirítjuk, majd elzárjuk.
+                        Közben a tésztát sós vízben al dentére főzzük, majd leszűrjük úgy, hogy egy keveset megtartunk a tészta főzővizéből.
+                    </p>
+                    <p>
+                        A tojásokat felverjük, sózzuk, borsozzuk, belereszeljük a parmezánt és a szerecsendiót is.
+                    </p>
+                    <p>
+                        A kifőtt tésztát beleforgatjuk a pirított szalonnába.
+                        Összerázzuk, majd ráöntjük a tojásos keveréket, a tészta főzővizét, és ha kicsit kihűlt a serpenyő, picit visszarakjuk a tűzre.
+                        Folyamatosan rázogatjuk addig, amíg az egész krémes nem lesz.
+                    </p>
+                </div>
+
+                <div class="media text-center">
+                    <iframe src="https://www.youtube.com/embed/7jPh79AdnRk"></iframe>
+                    <img src="../img/az-eredeti-carbonara.jpg" alt="carbonara">
+                </div>
+            </div>
+
+            <div class="comment-container">
+                <h2>Hozzászólások</h2>
+                <div class="comment">
+                    <h3 class="comment-user"><a href="../profile.html">firstuser</a></h3>
+                    <p class="comment-msg">Kedvenc receptem ezen az oldalon!</p>
+                </div>
+
+                <form class="recipe-new-comment" action="addCommentValidator.php" method="POST">
+                    <label for="recipe-comment">Új hozzászólás:</label>
+                    <textarea id="recipe-comment" name="recipe-comment"></textarea>
+                    <input class="recipe-add-comment cursor-pointer" type="submit" value="Hozzászólás">
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="./index.html">Főoldal</a></li>
+                <li><a href="../recipes.html">Receptek</a></li>
+                <li><a href="../login.html">Bejelentkezés</a></li>
+                <li><a href="../register.html">Regisztráció</a></li>
+
+                <li><a href="../profile.html">Profil</a></li>
+                <li><a href="#">Kijelentkezés</a></li>
+            </ul>
+            <p class="copyright">
+                Copyright &copy; 2022 Receptoldal
+            </p>
+        </footer>
+
+    </body>
+</html>

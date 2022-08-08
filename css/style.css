@@ -1,0 +1,822 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+:root {
+    --bg: #100570;
+    --text-shadow: 1px 1px 1px #eee, 1px 1px 1px var(--bg);
+    --bg-secondary: #291ba5;
+    --bg-footer: #060324;
+    --button-bg: #3b2eac;
+    --text: #c5c5c5;
+}
+
+/* basic reset, fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: var(--text-shadow);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar a,
+footer a {
+    color: #fff;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.9;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-rounded {
+    border-radius: 50%;
+}
+
+/* Nav */
+
+.navbar {
+    background-color: var(--bg);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.brand {
+    font-size: 28px;
+    padding: 8px;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.nav-link {
+    font-size: 18px;
+    padding: 9px;
+    border-radius: 10px;
+    transition: all .2s;
+}
+
+.nav-link:hover, .brand:hover {
+    background-color: #eee;
+    color: var(--bg);
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    background-color: #fff;
+}
+
+.nav-link.active {
+    background-color: var(--bg-secondary);
+}
+
+/* Main, main content */
+
+main {
+    min-height: 80vh;
+    margin: 40px 10%;
+}
+
+/* Főoldal */
+
+.introduction {
+    overflow: hidden;
+}
+
+.introduction-steps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.introduction-card:nth-child(1) { animation: appear-from-right 1s; }
+.introduction-card:nth-child(2) { animation: appear-from-bottom 2s; }
+.introduction-card:nth-child(3) { animation: appear-from-left 2.3s; }
+
+.introduction-card {
+    position: relative;
+    background-color: #fff;
+    width: 300px;
+    border: 2px solid #ccc;
+    margin: 10px;
+    z-index: 9;
+}
+
+.introduction-title {
+    height: 50px;
+    line-height: 22px;
+}
+
+.introduction-card .introduction-title,
+.introduction-card .introduction-text {
+    padding: 5px;
+    margin: 7px auto;
+}
+
+.introduction-register-hr {
+    margin: 0 auto !important;
+}
+
+.introduction-icon {
+    font-family: FontAwesome;
+    width: 50px;
+    height: 50px;
+    margin: 5px auto 20px;
+}
+
+.introduction-icon svg {
+    fill: var(--bg);
+}
+
+.register-link {
+    text-align: center;
+}
+
+.register-link a {
+    color: var(--bg);
+}
+
+.top-uploaders-table {
+    margin-top: 5px;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #ccc;
+}
+
+.top-uploaders-table tr:nth-child(odd) {
+    background-color: #ecebeb;
+}
+
+.top-uploaders-table th,
+.top-uploaders-table td {
+    text-align: left;
+    padding: 8px;
+  }
+
+.top-uploaders-table th {
+    background-color: var(--bg);
+    color: #fff;
+}
+
+/* Form */
+
+.form-container {
+    width: 50%;
+    padding: 30px;
+    border: 2px solid #ccc;
+    margin: 0 auto;
+}
+
+.form-container h1 {
+    margin-bottom: 20px;
+}
+
+.default-form input:not([type="file"]),
+.default-form textarea {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #ccc;
+}
+
+.default-form .form-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.default-form .form-btn-container > input[type="reset"],
+.default-form .form-btn-container > input[type="submit"],
+.profile-form input[type="submit"],
+.recipe-add-comment {
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 95%;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin: 15px 0;
+    padding: 8px;
+}
+
+.default-form .form-btn-container input[type="reset"] {
+    width: 25%;
+    background-color: #E52424;
+    color: #fff;
+}
+
+.default-form .form-btn-container input[type="submit"],
+.profile-form input[type="submit"],
+.recipe-add-comment {
+    width: 60%;
+    background-color: var(--button-bg);
+}
+
+.login-form fieldset {
+    border: none;
+}
+
+.login-form .form-btn-container {
+    justify-content: center;
+}
+
+.required-label::after,
+.required-footnote::before {
+    content: "*";
+    color: red;
+}
+
+/* Create Recipe form */
+.create-recipe-form textarea {
+    resize: none;
+}
+
+/* Receptek oldal */
+
+#page-title {
+    margin: 40px;
+}
+
+.recipes-container {
+    border: 2px solid #ccc;
+    max-width: 1200px;
+    display: grid;
+    grid-gap: 1rem;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 15px;
+}
+
+.card-container {
+    position: relative;
+    max-width: 300px;
+    margin: 8px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    padding-bottom: 5px;
+}
+
+.card-container .recipe-name {
+    height: 50px;
+    margin-top: 13px;
+    line-height: 19px;
+}
+
+.card-container .recipe-details {
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-container .recipe-uploader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    bottom: 0;
+}
+
+.card-container .recipe-uploader::before,
+.card-container .recipe-uploader::after {
+    content: "";
+    display: block;
+    border-top: 1px solid #000;
+    width: 25%;
+    margin: 0 auto;
+}
+
+.card-container .recipe-uploader h3 {
+    display: inline-block;
+}
+
+.card-container .recipe-uploader a {
+    display: flex;
+    align-items: center;
+}
+
+.recipe-uploader img {
+    max-width: 100%;
+}
+
+.card-container .recipe-uploader img,
+.feltolto img {
+    margin: 4px;
+}
+
+.comment-container {
+    margin: 150px 0;
+}
+
+.comment-container h2 {
+    margin: 10px 0;
+}
+
+.comment-container .comment {
+    border-left: 2px solid #ccc;
+    padding-left: 5px;
+    margin-bottom: 18px;
+}
+
+.recipe-new-comment label,
+.recipe-new-comment input {
+    display: block;
+}
+
+.recipe-new-comment #recipe-comment {
+    resize: none;
+    width: 70%;
+    height: 80px;
+}
+
+.recipe-add-comment {
+    width: 200px;
+    height: 40px;
+}
+
+/* Egy recept oldal */
+.receptneve {
+    grid-area: header;
+    text-decoration: underline;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.feltolto{
+    grid-area: feltolto;
+}
+
+/* Rating */
+.rating {
+    padding: 10px;
+    background: #fff;
+    position: relative;
+    direction: rtl;
+    margin: 0 auto;
+}
+
+.rating input {
+    position: absolute;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 9;
+}
+
+.rating .star {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 22px;
+    margin: 3px;
+    color: #FBB202;
+    cursor: pointer;
+}
+
+.rating .star:after {
+    content: '\f006';
+}
+
+.rating input:checked ~ .star:after,
+.rating input:hover ~ .star:after {
+    content: '\f005';
+}
+
+/* Elkészítési idő/adag */
+.adatok{
+    grid-area: adatok;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hozzavalok {
+    grid-area: menu;
+}
+
+.hozzavalok h2,
+.elkeszites h2 {
+    margin-bottom: 5px;
+}
+
+.hozzavalok h2 {
+    text-align: left;
+}
+
+.hozzavalok p{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.hozzavalok ul{
+    font-size: 18px;
+}
+
+.elkeszites {
+    grid-area: main;
+}
+
+.elkeszites p {
+    padding: 8px;
+    text-align: justify;
+}
+
+.media {
+    grid-area: right;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+                        'header header header adatok feltolto '
+                        'menu main main right right'
+                        'menu main main right right';
+    grid-gap: 0.3rem;
+    background-color: #fff;
+    padding: 15px;
+    border: 2px solid #ccc;
+    position: relative;
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+}
+
+.media > iframe,
+.media > img {
+    aspect-ratio: 16 / 9;
+    width: 80%;
+}
+
+/* Profil page */
+
+.profile-container,
+.main-page-container,
+.recipes-container {
+    margin: 0 15%;
+    padding: 15px !important;
+}
+
+.profile-information-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-form > input:not([type="file"]) {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    width: 50%;
+}
+
+.profile-picture-container {
+    float: right;
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.profile-picture-container > input[type="file"] {
+    display: none;
+}
+
+.profile-picture-container > label[for="profile-picture"] {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 5px;
+    background-color: #0d1117;
+    border: 2px solid #30363d;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.profile-container hr,
+.main-page-container hr {
+    margin: 50px auto;
+    width: 80%;
+}
+
+.recipe-list-container {
+    display: grid;
+    margin: 0 auto;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.recipe-list-container .card-container {
+    width: 260px;
+}
+
+.recipe-list-container .card-container img{
+    max-width: 100%;
+}
+
+.own-create-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Footer */
+
+footer {
+    padding: 40px 0;
+    background-color: var(--bg-footer);
+}
+
+footer ul {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul li {
+    padding: 0 15px;
+}
+
+footer ul li a {
+    font-size: 18px;
+    padding: 9px;
+    border-radius: 10px;
+    transition: all .2s;
+}
+
+footer ul li a:hover {
+    background-color: #eee;
+    color: var(--bg);
+}
+
+.copyright {
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 1250px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Nav */
+
+    .burger {
+        display: block;
+    }
+
+    .burger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        position: absolute;
+        right: 100%;
+        top: 70px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--bg);
+        text-align: center;
+        transition: .2s;
+    }
+
+    .nav-item {
+        margin: 6px 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .nav-menu.active {
+        right: 0;
+        padding-bottom: 20px;
+    }
+
+    /* Main, main content */
+
+    main {
+        margin: 40px 0;
+    }
+
+    /* Recipes */
+
+    .introduction-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .introduction-steps .introduction-card{
+        width: 80%;
+    }
+
+    .introduction-card:nth-child(1) { animation: appear-from-right 1s; }
+    .introduction-card:nth-child(2) { animation: appear-from-left 2s; }
+    .introduction-card:nth-child(3) { animation: appear-from-right 2s; }
+
+    .introduction-text {
+        width: 70%;
+    }
+
+    .recipes-container {
+        border: none;
+        margin: 0 auto;
+    }
+
+    .recipe-new-comment #recipe-comment {
+        width: 100%;
+    }
+
+    .grid-container {
+        border: none;
+    }
+    /* Footer */
+
+    footer ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+/* Mobil */
+@media only screen and (max-width:787px) {
+    .form-container {
+        border: none;
+        width: 100%;
+    }
+
+    .profile-picture-container {
+        float: none;
+        clear: left;
+        margin-bottom: 40px ;
+    }
+
+    .profile-picture-container {
+        margin: 30px auto;
+
+    }
+
+    .profile-form > input:not([type="file"]) {
+        width: 100%;
+    }
+    .introduction-steps .introduction-card{
+        width: 100%;
+    }
+}
+
+/* Receptek mobil */
+
+@media only screen and (max-width: 1600px){
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                        "header"
+                        "feltolto"
+                        "adatok"
+                        "right"
+                        "menu"
+                        "main";
+    }
+
+    .rating {
+        text-align: left;
+    }
+
+    .hozzavalok ul{
+        text-align: center;
+    }
+
+    .hozzavalok h2 {
+        text-align: center;
+    }
+
+    .hozzavalok p{
+        text-align: center;
+    }
+
+    .comment-container,
+    .elkeszites {
+        width: 80%;
+        margin: 150px auto;
+        padding: 5px;
+    }
+
+    .media > iframe,
+    .media > img {
+        width: 90%;
+    }
+}
+
+/* Egy recept nyomtatási */
+@media print {
+    p { font-size: 12pt; }
+    .navbar, footer, iframe, img, .feltolto, .comment-container { display: none; }
+    h1, h2, h3 { page-break-after: avoid; }
+    main { margin: 0; }
+    .grid-container {
+        border: none;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                            'header header header header adatok '
+                            'main main main menu menu'
+                            'main main main menu menu';
+    }
+
+    .receptneve,
+    .hozzavalok h2,
+    .hozzavalok p,
+    .hozzavalok ul,
+    .elkeszites h2 {
+        font-size: initial;
+        text-decoration: none;
+        text-align: initial;
+    }
+
+    .elkeszites p { text-align: justify; }
+}
+
+@page { margin: 0.5cm; }
+
+
+@keyframes appear-from-bottom {
+    from {top: 50vh;}
+    50% {top: 100px !important;}
+    to {top: 0;}
+}
+
+@keyframes appear-from-left {
+    from {left: 50vh;}
+    50% {left: 100px !important;}
+    to {left: 0;}
+}
+
+@keyframes appear-from-right {
+    from {right: 50vh;}
+    50% {right: 100px !important;}
+    to {right: 0;}
+}

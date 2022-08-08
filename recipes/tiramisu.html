@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tiramisu</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+        <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/app.js" defer></script>
+    </head>
+
+    <body>
+        <nav class="navbar">
+           <a class="brand" href="../index.html">Receptoldal</a>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Főoldal</a></li>
+                <li class="nav-item"><a class="nav-link" href="../recipes.html">Receptek</a></li>
+                <li class="nav-item"><a class="nav-link" href="../login.html">Bejelentkezés</a></li>
+                <li class="nav-item"><a class="nav-link" href="../register.html">Regisztráció</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="../profile.html">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kijelentkezés</a></li>
+            </ul>
+
+            <div class="burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+
+        <main>
+            <div class="grid-container">
+                <h1 class="receptneve">Tiramisu</h1>
+                <div class="feltolto text-center">
+                    <div class="rating">
+                        <span>(22)</span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                        <input type="radio" name="star"/><span class="star"></span>
+                    </div>
+                    <a href="../users/user12.html">
+                        <img class="img-rounded" height="50" width="50" src="../img/user12.jpg" alt="user12 profil képe">
+                        <p>user12</p>
+                    </a>
+                    <p>Feltöltés ideje: 2022.03.19</p>
+                </div>
+
+                <div class="adatok text-center">
+                    <p>Adag: 1 db 30x35 cm-es sütőformához</p>
+                    <p>Idő: 80 perc</p>
+                </div>
+
+                <div class="hozzavalok">
+                    <h2 class="text-center">Hozzávalók:</h2>
+                    <ul>
+                        <li>4 tk instant kávé</li>
+                        <li>350 ml forró víz</li>
+                        <li>100 g kristálycukor</li>
+                        <li>4 db tojás</li>
+                        <li>1 csipet só</li>
+                        <li>500 g mascarpone</li>
+                        <li>24 db babapiskóta</li>
+                        <li>cukrozatlan kakaópor</li>
+                    </ul>
+                </div>
+
+                <div class="elkeszites">
+                    <h2 class="text-center">Elkészítés:</h2>
+                    <p>
+                        Első lépésként feloldjuk az instant kávét forró vízben, majd átöntjük egy tálba, hogy könnyebben kihűljön és adunk hozzá a receptben szereplő cukormennyiségből kb. 2 evőkanálnyit.
+                        A tojásokat kettéválasztjuk. A tojássárgájához adjuk a maradék cukor felét és fehéredésig
+                        habosítjuk. A fehérjét egy csipet sóval tiszta habverővel elkezdjük felverni, majd hozzáadjuk a maradék cukrot és kemény habbá verjük.
+                    </p>
+                    <p>
+                        A cukros tojássárgáját alaposan elkeverjük a mascarponéval, majd mehet hozzá tojásfehérjehab fele, amivel fellazítjuk a sárgájás részt, ezután
+                        lazán beleforgatjuk a hab másik felét is, ügyelve, hogy ne törjük össze a habot.
+                    </p>
+                    <p>
+                        Már csak az összeállítás maradt hátra. Egy kb. 35 cm átlójú tálba rakunk egy kisebb adag krémet és elegyengetjük.
+                        A babapiskótákat 2-3 másodpercre a kávéba mártjuk és rásorakoztatjuk őket a krémre.
+                        Majd újra jön egy adag mascarponés krémréteg, rá két sor babapiskóta, majd az egészet krémmel zárjuk.
+                        Utolsó lépésként megszórjuk egy nagy adag kakaóporral és hűtőbe rakjuk, legalább 3 órára, de a legjobb egy egész éjszakát pihentetni hogy jól összeérjenek az ízek.
+                    </p>
+                </div>
+
+                <div class="media text-center">
+                    <iframe src="https://www.youtube.com/embed/X_GIPOtyJSo"></iframe>
+                    <img src="../img/tiramisu.jpg" alt="tiramisu">
+                </div>
+            </div>
+
+            <div class="comment-container">
+                <h2>Hozzászólások</h2>
+
+                <form class="recipe-new-comment" action="addCommentValidator.php" method="POST">
+                    <label for="recipe-comment">Új hozzászólás:</label>
+                    <textarea id="recipe-comment" name="recipe-comment"></textarea>
+                    <input class="recipe-add-comment cursor-pointer" type="submit" value="Hozzászólás">
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <ul>
+                <li><a href="./index.html">Főoldal</a></li>
+                <li><a href="../recipes.html">Receptek</a></li>
+                <li><a href="../login.html">Bejelentkezés</a></li>
+                <li><a href="../register.html">Regisztráció</a></li>
+
+                <li><a href="../profile.html">Profil</a></li>
+                <li><a href="#">Kijelentkezés</a></li>
+            </ul>
+            <p class="copyright">
+                Copyright &copy; 2022 Receptoldal
+            </p>
+        </footer>
+
+    </body>
+</html>
